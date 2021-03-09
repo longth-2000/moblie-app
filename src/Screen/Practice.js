@@ -5,9 +5,9 @@ import AsyncStorage from '@react-native-community/async-storage';
 import firebase from '@react-native-firebase/app';
 import '@react-native-firebase/database';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import './Controller/SetAuth';
+import '../Controller/SetAuth';
 import 'ajv';
-let P;
+let object;
 let data = [];
 let questionList = [];
 let answer = [];
@@ -24,7 +24,7 @@ export default class Practice extends Component {
   constructor({ props }) {
     super(props);
     // eslint-disable-next-line consistent-this
-    P = this;
+    object = this;
     this.state = {
       answer: -1,
       question: 0,
@@ -34,12 +34,12 @@ export default class Practice extends Component {
   }
   loadFromDataBase = async () => {
     try {
-      let q1 = firebase.database().ref(key);
-      q1.on('value', (datasnap) => {
+      let question_number = firebase.database().ref(key);
+      question_number.on('value', (datasnap) => {
         questionValue = datasnap.val();
-        P.build();
+        object.build();
         if (questionValue != null) {
-          P.saveFromDataBase();
+          object.saveFromDataBase();
         }
       });
     } catch (e) { }
@@ -76,7 +76,7 @@ export default class Practice extends Component {
       }
       this.setState({ s: 0 });
     } catch (e) {
-      P.props.navigation.replace('Grammar');
+      object.props.navigation.replace('Grammar');
 
     }
   }
@@ -105,7 +105,7 @@ export default class Practice extends Component {
     });
   }
   save() {
-    answer[numberQuestion] = P.state.answer;
+    answer[numberQuestion] = object.state.answer;
   }
   resum() {
     questionList = Object.values(questionValue);
@@ -176,9 +176,7 @@ export default class Practice extends Component {
           <Text style={styles.titleText}>
             {this.props.route.params.title}
           </Text>
-          {/*  <Text style={{marginLeft:140, width:45, height:45, backgroundColor:"#E0E0E0", borderRadius:45, textAlign:"center", color:"black", fontSize:25, fontWeight:"bold", paddingTop:3}}>
-            {this.state.question + 1}
-          </Text> */}
+        
         </View>
         <View style={styles.question}>
           <Text style={{ marginTop: 20, fontSize: 18, fontWeight: "bold", marginLeft: 10 }}>
@@ -188,27 +186,27 @@ export default class Practice extends Component {
         <View style={styles.answerFrame}>
           <View style={{ backgroundColor: "white", height: '15%', paddingTop: 10, marginBottom: 10, width: "95%", marginLeft: 10, marginTop: 40, borderRadius: 5, borderWidth: 1, borderColor: "#C0C0C0" }}>
             <Answer
-              content={data[(sort[P.state.question] + 1) % 4]}
-              id={(sort[P.state.question] + 1) % 4}
+              content={data[(sort[object.state.question] + 1) % 4]}
+              id={(sort[object.state.question] + 1) % 4}
             />
           </View>
 
           <View style={{ backgroundColor: "white", height: '15%', paddingTop: 10, marginBottom: 10, width: "95%", marginLeft: 10, marginTop: 10, borderRadius: 5, borderWidth: 1, borderColor: "#C0C0C0" }}>
             <Answer
-              content={data[(sort[P.state.question] + 2) % 4]}
-              id={(sort[P.state.question] + 2) % 4}
+              content={data[(sort[object.state.question] + 2) % 4]}
+              id={(sort[object.state.question] + 2) % 4}
             />
           </View>
           <View style={{ backgroundColor: "white", height: '15%', paddingTop: 10, marginBottom: 10, width: "95%", marginLeft: 10, marginTop: 10, borderRadius: 5, borderWidth: 1, borderColor: "#C0C0C0" }}>
             <Answer
-              content={data[(sort[P.state.question] + 3) % 4]}
-              id={(sort[P.state.question] + 3) % 4}
+              content={data[(sort[object.state.question] + 3) % 4]}
+              id={(sort[object.state.question] + 3) % 4}
             />
           </View>
           <View style={{ backgroundColor: "white", height: '15%', paddingTop: 10, marginBottom: 10, width: "95%", marginLeft: 10, marginTop: 10, borderRadius: 5, borderWidth: 1, borderColor: "#C0C0C0" }}>
             <Answer
-              content={data[(sort[P.state.question] + 4) % 4]}
-              id={(sort[P.state.question] + 4) % 4}
+              content={data[(sort[object.state.question] + 4) % 4]}
+              id={(sort[object.state.question] + 4) % 4}
             />
           </View>
         </View>
@@ -262,9 +260,9 @@ export class Answer extends Component {
         }}>
         <CheckBox
           style={styles.checkbox}
-          value={isSelect(P.state.answer, this.props.id)}
+          value={isSelect(object.state.answer, this.props.id)}
           onChange={() => {
-            P.select(this.props.id);
+            object.select(this.props.id);
           }}
         />
         <Text style={styles.content}>{this.props.content}</Text>

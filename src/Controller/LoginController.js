@@ -1,15 +1,15 @@
 import React, {Component} from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
-import Login from '../Login';
+import Login from '../Screen/Login';
 import {NavigationContainer} from '@react-navigation/native';
-import SideMenu from '../../Template/SideMenu';
+import SideMenu from '../Template/SideMenu';
 import firebase from '@react-native-firebase/app';
 import '@react-native-firebase/auth';
 import {AccessToken} from 'react-native-fbsdk';
 import './UserController';
 import './AuthController';
 import {GoogleSignin} from '@react-native-community/google-signin';
-import Select from '../../Template/Select';
+import Select from '../Template/Select';
 const Stack = createStackNavigator();
 global.isLogin = 0;
 global.grammarAchievements = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,0, 0,0, 0, 0, 0, 0];

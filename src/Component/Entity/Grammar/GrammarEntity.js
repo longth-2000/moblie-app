@@ -7,7 +7,7 @@ import {
   ScrollView,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import GrammarContent from '../../Compoment/GrammarContent';
+
 let data1 = Object.values(require('./Grammar/G1.json'));
 let data2 = Object.values(require('./Grammar/G2.json'));
 let data3 = Object.values(require('./Grammar/G3.json'));

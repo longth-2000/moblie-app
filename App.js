@@ -1,6 +1,6 @@
 
 import React, {Component} from 'react';
-import LoginController from './Screens/Controller/LoginController';
+import LoginController from './src/Controller/LoginController';
 class App extends Component {
   render() {
     return <LoginController />;

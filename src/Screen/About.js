@@ -29,7 +29,7 @@ export default class About extends Component {
                 </View>
                 <View style={{ backgroundColor: "white", height: 180 }}>
                     <View>
-                        <Image style={styles.image} source={require('../src/mrfox.png')} />
+                        <Image style={styles.image} source={require('../Image/mrfox.png')} />
                     </View>
                     <View >
                         <Text style={styles.content}>FOXENGLISH</Text>

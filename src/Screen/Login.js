@@ -143,14 +143,14 @@ export class MrFox extends Component {
     if (global.isLogin === 0) {
       return (
         <View>
-          <Image style={{ width: 200, height: 200, marginTop: 100, borderRadius:200 }} source={require('../src/mrfox1.png')} />
+          <Image style={{ width: 200, height: 200, marginTop: 100, borderRadius:200 }} source={require('../Image/mrfox1.png')} />
           <Text style={styles.titleApp}>FoxEnglish</Text>
         </View>
       );
     } else {
       return (
         <View style={{ alignItems: 'center' }}>
-          <Image style={{ width: 150, height: 150, marginTop: 30, opacity:0 }} source={require('../src/mrfox1.png')} />
+          <Image style={{ width: 150, height: 150, marginTop: 30, opacity:0 }} source={require('../Image/mrfox1.png')} />
           <Image style={styles.image} source={{ uri: global.userPicture }} />
           <Text style={styles.textTitle}>Xin Chào {global.userName}</Text>
         </View>

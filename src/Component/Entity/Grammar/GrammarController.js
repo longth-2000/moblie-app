@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
 import {Text, TouchableOpacity} from 'react-native';
 import {createStackNavigator} from '@react-navigation/stack';
-import GrammarEntity from '../Entity/GrammarEntity';
-import Practice from '../Practice';
-import Result from '../Result';
-import Grammar from '../Entity/Grammar';
+import GrammarEntity from './GrammarEntity';
+import Practice from '../../../Screen/Practice';
+import Result from '../../../Screen/Result';
+import Grammar from './GrammarEntity';
 import {DrawerActions} from '@react-navigation/native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 

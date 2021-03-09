@@ -7,11 +7,11 @@ import {
   DrawerItemList,
   DrawerItem,
 } from '@react-navigation/drawer';
-import GrammarController from '../Screens/Controller/GrammarController';
-import VocabularyController from '../Screens/Controller/VocabularyController';
-import Practice from '../Screens/Practice';
-import Login from '../Screens/Login';
-import About from '../Screens/About';
+import GrammarController from '../Component/Entity/Grammar/GrammarController';
+import VocabularyController from '../Component/Entity/Vocabulary/VocabularyController';
+import Practice from '../Screen/Practice';
+import Login from '../Screen/Login';
+import About from '../Screen/About';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import Ionicons from 'react-native-vector-icons/Ionicons';
@@ -32,10 +32,6 @@ function fox() {
           }}>
           {global.userName}
         </Text>
-        {/* <Text
-          style={{ marginTop: 10, marginLeft: 80, color: 'white', fontSize: 15 }}>
-          Know Fox, Know Success
-        </Text> */}
       </View>
     </View>
   );
@@ -120,7 +116,7 @@ export class Fox extends Component {
       <View style={{ width: 100, height: 20, backgroundColor: 'violet' }}>
         <Image
           style={{ width: 80, height: 80, marginTop: 60, marginLeft: 0 }}
-          source={require('../src/mrfox.png')}
+          source={require('../Image/mrfox.png')}
         />
       </View>
     );

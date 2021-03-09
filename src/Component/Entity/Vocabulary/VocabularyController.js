@@ -2,8 +2,8 @@ import React, {Component} from 'react';
 import {Text, TouchableOpacity} from 'react-native';
 import {DrawerActions} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
-import Vocabulary from '../Entity/Vocabulary';
-import VocabularyEntity from '../Entity/VocabularyEntity';
+import Vocabulary from './Vocabulary';
+import VocabularyEntity from './VocabularyEntity';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 const Stack = createStackNavigator();

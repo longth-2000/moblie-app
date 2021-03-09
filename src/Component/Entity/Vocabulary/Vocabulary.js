@@ -89,75 +89,75 @@ const styles = StyleSheet.create({
 let Data = [
   {
     content: 'Greeting',
-    img: require('../../src/VocabularyImage/greeting.png'),
+    img: require('../../../Image/VocabularyImage/greeting.png'),
     key: 'V2'
    
   },
   {
     content: ' Travel',
-    img: require('../../src/VocabularyImage/travel.png'),
+    img: require('../../../Image/VocabularyImage/travel.png'),
     key: 'V3'
   },
   {
     content: '  Music',
-    img: require('../../src/VocabularyImage/music1.png'),
+    img: require('../../../Image/VocabularyImage/music1.png'),
     key: 'V4'
   },
 
   {
     content: ' Friend',
-    img: require('../../src/VocabularyImage/friend1.png'),
+    img: require('../../../Image/VocabularyImage/friend1.png'),
     key: 'V5'
   },
 
   {
     content: '  Earth',
-    img: require('../../src/VocabularyImage/earth1.png'),
+    img: require('../../../Image/VocabularyImage/earth1.png'),
     key: 'V1'
   },
 
   {
     content: '   Food',
-    img: require('../../src/VocabularyImage/eat1.png'),
+    img: require('../../../Image/VocabularyImage/eat1.png'),
     key: 'V6'
 
   },
 
   {
     content: '  Sport',
-    img: require('../../src/VocabularyImage/sport.jpg'),
+    img: require('../../../Image/VocabularyImage/sport.jpg'),
     key: 'V7'
 
   },
 
   {
     content: '   Time',
-    img: require('../../src/VocabularyImage/time1.png'),
+    img: require('../../../Image/VocabularyImage/time1.png'),
     key: 'V8'
 
   },
 
   {
     content: '    Job',
-    img: require('../../src/VocabularyImage/job1.webp'),
+    img: require('../../../Image/VocabularyImage/job1.webp'),
     key: 'V9'
 
   },
   {
     content: ' Vehicle',
-    img: require('../../src/VocabularyImage/verhicle1.png'),
+    img: require('../../../Image/VocabularyImage/verhicle1.png'),
     key: 'V10'
 
   },
   {
     content: '  Nation',
-    img: require('../../src/VocabularyImage/nation.png'),
+    img: require('../../../Image/VocabularyImage/nation.png'),
     key: 'V11'
 
   },
   {
     content: '   Drink',
-    img: require('../../src/VocabularyImage/drink1.png'),
+    img: require('../../../Image/VocabularyImage/drink1.png'),
     key: 'V12'
 
   },

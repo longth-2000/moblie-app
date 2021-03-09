@@ -5,7 +5,7 @@ export default class Select extends Component {
   render() {
     return (
       <View style={{ flex: 1, backgroundColor:"rgb(60,179,113)"}}>
-        <Image style={{ width: 200, height: 200, marginTop: 30, marginLeft:100, borderRadius:170 }} source={require('../src/mrfox1.png')} />
+        <Image style={{ width: 200, height: 200, marginTop: 30, marginLeft:100, borderRadius:170 }} source={require('../Image/mrfox1.png')} />
         <TouchableOpacity
           style={{ backgroundColor: "white", height: 150, width: 150, borderRadius: 15, marginTop: 60, marginLeft: 35 }}
           onPress={() => {
@@ -37,7 +37,7 @@ export default class Select extends Component {
           onPress={() => {
             global.L.props.navigation.replace('SideMenu', { command: 2 });
           }}>
-          <Image style={{width:90, height:90, marginLeft:25, marginTop:10}} source={require('../src/mrfox.png')}></Image>
+          <Image style={{width:90, height:90, marginLeft:25, marginTop:10}} source={require('../Image/mrfox.png')}></Image>
           <Text style={{ fontSize: 20, color: "black", textAlign: "center", fontWeight: "bold", marginTop: 0 }}>ABOUT US</Text>
         </TouchableOpacity>
         </View>
